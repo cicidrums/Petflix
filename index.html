@@ -10,25 +10,26 @@
   <body>
     <div class="container">
       <div class="jumbotron">
+        <h1>PETFLIX MOVIES</h1>
         <div class="row">
           <div class="col-md-4">
             <h1>Step 1.</h1><hr>
               <h6>Select your movie & time:</h6>
               <form id="movie">
-                <select class="form-control form-control-lg">
-                  <option>Finding Nemo</option>
+                <select class="form-control form-control-lg" id="nemo">
+                  <option value="0">Finding Nemo</option>
                   <option value="3">11:00 AM</option>
                   <option value="5">2:00 PM</option>
                   <option value="7">5:00 PM</option>
                 </select><br/>
-                <select class="form-control form-control-lg">
-                  <option>Benji</option>
+                <select class="form-control form-control-lg" id="benji">
+                  <option value="0">Benji</option>
                   <option value="3">11:00 AM</option>
                   <option value="5">2:00 PM</option>
                   <option value="7">5:00 PM</option>
                 </select><br/>
-                <select class="form-control form-control-lg">
-                  <option>Aristocats</option>
+                <select class="form-control form-control-lg" id="cats">
+                  <option value="0">Aristocats</option>
                   <option value="3">11:00 AM</option>
                   <option value="5">2:00 PM</option>
                   <option value="7">5:00 PM</option>
@@ -39,17 +40,14 @@
             <h1>Step 2.</h1><hr>
             <form id="info">
               <h6>Select your age group:</h6>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" value="0">
-                <label class="form-check-label">17 and under</label>
+              <div class="radio"><label>
+                <input type="radio" name="age" value="0"> 17 and under</label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" value="2">
-                <label class="form-check-label">18 - 59</label>
+              <div class="radio">
+                <label><input type="radio" name="age" value="2"> 18 - 59</label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" value="1">
-                <label class="form-check-label">60 and over</label>
+              <div class="radio">
+                <label><input type="radio" name="age" value="1"> 60 and over</label>
               </div>
               <br/>
               <h6>How many tickets?</h6>
@@ -60,7 +58,7 @@
           </div>
           <div class="col-md-4">
             <h1>Total</h1><hr>
-            <p id="total"></p>
+            <h2 id="total"></h2>
           </div>
 
         </div>
