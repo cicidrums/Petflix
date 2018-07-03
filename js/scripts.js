@@ -6,7 +6,7 @@ function Ticket(movie, time, quantity) {
 }
 
 Ticket.prototype.info = function() {
-  return this.quantityNum + " tickets for " + this.movieName + " at " + this.timeSlot;
+  return this.quantityNum + " x " + this.movieName + " at " + this.timeSlot;
 }
 
 
@@ -38,7 +38,8 @@ $(document).ready(function() {
     //console.log("qty " + ticketQty);
     //console.log("total " + totalCost);
 
-    $("h2#total").text(newTicket.info() + " for " + "$" + totalCost + ".00");
+    $("span#summary").text(newTicket.info() + ":");
+    $("h2#total").text("$" + totalCost + ".00");
 
   });
 });
